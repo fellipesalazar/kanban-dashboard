@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Dashboard</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <header>
+        <h1><ion-icon name="reader-outline"></ion-icon>Projects</h1>
+        <div class="flex">
+            <div class="notifications">
+                <ion-icon name="notifications-outline"></ion-icon>
+            </div>
+            <div class="user-info">
+                <span>FS</span>
+                <div class="dropdown-menu">
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <aside class="sidebar">
+            <a href="#" class="logo">
+                <span><ion-icon name="book-outline"></ion-icon></span>
+            </a>
+            <nav class="sidebar-menu">
+                <ul>
+                    <li><a href="#">
+                        <span class="menu-icon"><ion-icon name="grid-outline"></ion-icon></span>
+                        <span class="menu-text">Overview</span>
+                    </a></li>
+                    <li><a href="#">
+                        <span class="menu-icon"><ion-icon name="notifications-outline"></ion-icon></span>
+                        <span class="menu-text">Notifications</span>
+                    </a></li>
+                    <li><a href="#">
+                        <span class="menu-icon"><ion-icon name="calendar-outline"></ion-icon></span>
+                        <span class="menu-text">Calendar</span>
+                    </a></li>
+                    <li><a href="#">
+                        <span class="menu-icon"><ion-icon name="megaphone-outline"></ion-icon></span>
+                        <span class="menu-text">Campaings</span>
+                    </a></li>
+                    <li class="active"><a href="#">
+                        <span class="menu-icon"><ion-icon name="reader-outline"></ion-icon></span>
+                        <span class="menu-text">Projects</span>
+                    </a></li>
+                    <li><a href="#">
+                        <span class="menu-icon"><ion-icon name="git-merge-outline"></ion-icon></span>
+                        <span class="menu-text">Architecture</span>
+                    </a></li>
+                    <li><a href="#">
+                        <span class="menu-icon"><ion-icon name="images-outline"></ion-icon></span>
+                        <span class="menu-text">Assets</span>
+                    </a></li>
+                    <li><a href="#">
+                        <span class="menu-icon"><ion-icon name="briefcase-outline"></ion-icon></span>
+                        <span class="menu-text">Tools</span>
+                    </a></li>
+                </ul>
+            </nav>
+        </aside>
+        <section class="content">
+            <article class="box">
+                <h3>To Do</h3>
+                <div class="task">
+                    <h4 class="task-title">Task Title</h4>
+                    <p class="task-due">Due: 10/25/21</p>
+                    <div class="task-infos">
+                        <span class="task-comments">
+                            <ion-icon name="chatbubbles-outline"></ion-icon> 3
+                        </span>
+                        <span class="task-attachments">
+                            <ion-icon name="attach-outline"></ion-icon> 8
+                        </span>
+                        <span class="task-checklist">
+                            <ion-icon name="checkbox-outline"></ion-icon> 4/10
+                        </span>
+                    </div>
+                    <div class="task-responsable flex">
+                        <p class="task-area">Social Media</p>
+                        <span class="task-user">PL</span>
+                    </div>
+                </div>
+            </article>
+            <article class="box"></article>
+            <article class="box"></article>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="src/js/scripts.js"></script>
+</body>
+</html>
