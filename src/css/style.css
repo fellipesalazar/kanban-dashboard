@@ -15,6 +15,7 @@
     --blue-light: #f1f9ff;
     --gray: #bdbdbd;
     --gray-light: #eaeaea;
+    --gray-dark: #7e7e7e;
 }
 
 *::-webkit-scrollbar{
@@ -145,6 +146,23 @@ header h1 ion-icon {
     margin-right: 1.5em;
 }
 
+.notifications:after {
+    content: "1";
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .notifications ion-icon {
     font-size: 1.5em;
     color: #fff;
@@ -185,7 +203,7 @@ header h1 ion-icon {
 
  article.box {
      width: 33%;
-     background-color: rgba(255,213,208,.3);
+     background-color: rgba(255,213,208,.5);
      /* backdrop-filter: blur(3px); */
      border-radius: 4px;
      padding: 1.25em;
@@ -198,3 +216,54 @@ header h1 ion-icon {
      font-weight: 700;
      margin-bottom: 1.25em;
  }
+
+ .task {
+     background-color: #fff;
+     padding: 1.25em;
+     border-radius: 4px;
+     font-size: 14px;
+     color: var(--gray-dark);
+     cursor: pointer;
+ }
+
+ .task:not(:last-child) {
+     margin-bottom: 1.5em;
+ }
+
+ .task-title {
+     color: var(--text);
+     font-weight: 500;
+     font-size: 16px;
+ }
+
+ .task-due,
+ .task-infos,
+ .task-title {
+     margin-bottom: .5em;
+ }
+
+ .task-infos span {
+    margin-right: .75em;
+
+ }
+
+ .task-attachments ion-icon {
+    margin-right: -2px;
+ }
+
+ .task-responsable {
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .task-user {
+     width: 30px;
+     height: 30px;
+     background-color: var(--coral);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: #fff;
+     border-radius: 50%;
+ }
+
