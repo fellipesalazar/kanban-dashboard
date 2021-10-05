@@ -33,7 +33,7 @@
 }
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
     background-color: var(--coral);
 }
@@ -115,7 +115,7 @@ nav.sidebar-menu {
 /* header */
 
 header {
-    position: relative;
+    position: fixed;
     left: 200px;
     width: calc(100% - 200px);
     height: 80px;
@@ -123,11 +123,15 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: .25s;
+    background-color: var(--coral);
+    z-index: 999;
 }
 
 header h1 {
     color: #fff;
     font-size: 28px;
+    transition: .25s;
 }
 
 header h1 ion-icon {
@@ -167,6 +171,7 @@ header h1 ion-icon {
     font-size: 1.5em;
     color: #fff;
     margin-bottom: -6px;
+    cursor: pointer;
 }
 
 .user-info {
@@ -182,23 +187,95 @@ header h1 ion-icon {
     background-color: var(--blue);
     border-radius: 50%;
     cursor: pointer;
+    color: var(--text);
+}
+
+.dropdown-menu {
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 10px);
+    width: 180px;
+    padding: 1em .75em;
+    border-radius: 4px;
+    border: 1px solid var(--gray-light);
+    display: none; /* control hide/show */
+}
+
+.notifications .dropdown-menu {
+    width: 260px;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+}
+
+/* .dropdown-menu li:not(:last-child) {
+    margin-bottom: .75em;
+} */
+
+.dropdown-menu a {
+    display: block;
+    line-height: 40px;
+    text-decoration: none;
+    color: var(--text);
+    border-radius: 4px;
+    padding: 0 1em;
+}
+
+.notifications .dropdown-menu a {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.notifications .dropdown-menu a:not(:last-child) {
+    margin-bottom: .75em;
+    padding: 1em;
+}
+
+.notifications .dropdown-menu a:last-child {
+    color: var(--coral);
+}
+
+.notifications .dropdown-menu a.unread {
+    background-color: var(--blue-light);
+    font-weight: 500;
+}
+
+.notifications .dropdown-menu a.read {
+    color: var(--gray-dark);
+}
+
+.dropdown-menu li:hover a {
+    background-color: var(--blue);
+}
+
+.dropdown-menu li:last-child:hover a {
+    background-color: var(--pink);
+}
+
+.dropdown-menu a ion-icon {
+    margin-right: 4px;
 }
 
  /* content */
 
  section.content {
      position: relative;
-     top: 0;
+     top: 80px;
      left: 200px;
      width: calc(100vw - 200px);
-     min-height: calc(100vh - 80px);
+     min-height: 100vh;
      padding: 2em;
      column-gap: 1.5em;
      display: flex;
      justify-content: space-between;
+     align-items: flex-start;
      background-image: url(../../assets/img/background.png);
      background-size: cover;
      background-repeat: no-repeat;
+     transition: .25s;
+     overflow-y: auto;
  }
 
  article.box {
@@ -217,46 +294,69 @@ header h1 ion-icon {
      margin-bottom: 1.25em;
  }
 
- .task {
+ .project-list {
+     min-height: 3em;
+ }
+
+ .project {
      background-color: #fff;
      padding: 1.25em;
      border-radius: 4px;
      font-size: 14px;
      color: var(--gray-dark);
-     cursor: pointer;
+     cursor: grab;
  }
 
- .task:not(:last-child) {
+ .grab {
+     transform: rotate(-5deg);
+ }
+
+ .ui-state-highlight {
+     background-color: var(--pink);
+     height: 3em;
+     margin-bottom: 1.5em;
+     border: none;
+     border-radius: 4px;
+     opacity: .5;
+ }
+
+ .project {
      margin-bottom: 1.5em;
  }
 
- .task-title {
+ .project-title {
      color: var(--text);
      font-weight: 500;
      font-size: 16px;
+     cursor: pointer;
+     display: inline-block;
  }
 
- .task-due,
- .task-infos,
- .task-title {
+ .project-title:hover {
+     text-decoration: underline;
+ }
+
+ .project-due,
+ .project-infos,
+ .project-title {
      margin-bottom: .5em;
  }
 
- .task-infos span {
+ .project-infos span {
     margin-right: .75em;
 
  }
 
- .task-attachments ion-icon {
+ .project-attachments ion-icon {
     margin-right: -2px;
  }
 
- .task-responsable {
+ .project-responsable {
      justify-content: space-between;
      align-items: center;
  }
 
- .task-user {
+ .project-user {
      width: 30px;
      height: 30px;
      background-color: var(--coral);
@@ -265,5 +365,11 @@ header h1 ion-icon {
      justify-content: center;
      color: #fff;
      border-radius: 50%;
+ }
+
+ .add-project {
+     color: var(--coral);
+     font-weight: 400;
+     cursor: pointer;
  }
 

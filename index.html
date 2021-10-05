@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/plugins/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
@@ -18,11 +19,25 @@
         <div class="flex">
             <div class="notifications">
                 <ion-icon name="notifications-outline"></ion-icon>
+                <div class="dropdown-menu">
+                    <a class="unread" href="#">⏳ Do you have projects awaiting approval from the scrum master</a>
+                    <a class="read" href="#">🎉 Congratulations! You have completed your first project</a>
+                    <a href="#">View all</a>
+                </div>
             </div>
             <div class="user-info">
                 <span>FS</span>
                 <div class="dropdown-menu">
-
+                    <nav>
+                        <ul>
+                            <li><a href="#">
+                                <ion-icon name="settings-outline"></ion-icon> Settings
+                            </a></li>
+                            <li><a href="#">
+                                <ion-icon name="log-out-outline"></ion-icon> Log out
+                            </a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -72,131 +87,141 @@
         <section class="content">
             <article class="box">
                 <h3>To Do</h3>
-                <div class="task">
-                    <h4 class="task-title">Task Title</h4>
-                    <p class="task-due">Due: 10/25/21</p>
-                    <div class="task-infos">
-                        <span class="task-comments">
-                            <ion-icon name="chatbubbles-outline"></ion-icon> 3
-                        </span>
-                        <span class="task-attachments">
-                            <ion-icon name="attach-outline"></ion-icon> 8
-                        </span>
-                        <span class="task-checklist">
-                            <ion-icon name="checkbox-outline"></ion-icon> 4/10
-                        </span>
+                <div class="project-list">
+                    <div class="project">
+                        <h4 class="project-title">Project title</h4>
+                        <p class="project-due">Due: 10/25/21</p>
+                        <div class="project-infos">
+                            <span class="project-comments">
+                                <ion-icon name="chatbubbles-outline"></ion-icon> 3
+                            </span>
+                            <span class="project-attachments">
+                                <ion-icon name="attach-outline"></ion-icon> 8
+                            </span>
+                            <span class="project-checklist">
+                                <ion-icon name="checkbox-outline"></ion-icon> 4/10
+                            </span>
+                        </div>
+                        <div class="project-responsable flex">
+                            <p class="project-area">Social Media</p>
+                            <span class="project-user">PL</span>
+                        </div>
                     </div>
-                    <div class="task-responsable flex">
-                        <p class="task-area">Social Media</p>
-                        <span class="task-user">PL</span>
+                    <div class="project">
+                        <h4 class="project-title">Project title</h4>
+                        <p class="project-due">Due: 10/25/21</p>
+                        <div class="project-infos">
+                            <span class="project-comments">
+                                <ion-icon name="chatbubbles-outline"></ion-icon> 3
+                            </span>
+                            <span class="project-attachments">
+                                <ion-icon name="attach-outline"></ion-icon> 8
+                            </span>
+                            <span class="project-checklist">
+                                <ion-icon name="checkbox-outline"></ion-icon> 4/10
+                            </span>
+                        </div>
+                        <div class="project-responsable flex">
+                            <p class="project-area">Social Media</p>
+                            <span class="project-user">PL</span>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h4 class="project-title">Project title</h4>
+                        <p class="project-due">Due: 10/25/21</p>
+                        <div class="project-infos">
+                            <span class="project-comments">
+                                <ion-icon name="chatbubbles-outline"></ion-icon> 3
+                            </span>
+                            <span class="project-attachments">
+                                <ion-icon name="attach-outline"></ion-icon> 8
+                            </span>
+                            <span class="project-checklist">
+                                <ion-icon name="checkbox-outline"></ion-icon> 4/10
+                            </span>
+                        </div>
+                        <div class="project-responsable flex">
+                            <p class="project-area">Social Media</p>
+                            <span class="project-user">PL</span>
+                        </div>
                     </div>
                 </div>
-                <div class="task">
-                    <h4 class="task-title">Task Title</h4>
-                    <p class="task-due">Due: 10/25/21</p>
-                    <div class="task-infos">
-                        <span class="task-comments">
-                            <ion-icon name="chatbubbles-outline"></ion-icon> 3
-                        </span>
-                        <span class="task-attachments">
-                            <ion-icon name="attach-outline"></ion-icon> 8
-                        </span>
-                        <span class="task-checklist">
-                            <ion-icon name="checkbox-outline"></ion-icon> 4/10
-                        </span>
-                    </div>
-                    <div class="task-responsable flex">
-                        <p class="task-area">Social Media</p>
-                        <span class="task-user">PL</span>
-                    </div>
-                </div>
-                <div class="task">
-                    <h4 class="task-title">Task Title</h4>
-                    <p class="task-due">Due: 10/25/21</p>
-                    <div class="task-infos">
-                        <span class="task-comments">
-                            <ion-icon name="chatbubbles-outline"></ion-icon> 3
-                        </span>
-                        <span class="task-attachments">
-                            <ion-icon name="attach-outline"></ion-icon> 8
-                        </span>
-                        <span class="task-checklist">
-                            <ion-icon name="checkbox-outline"></ion-icon> 4/10
-                        </span>
-                    </div>
-                    <div class="task-responsable flex">
-                        <p class="task-area">Social Media</p>
-                        <span class="task-user">PL</span>
-                    </div>
-                </div>
+                <div class="add-project"><ion-icon name="add-outline"></ion-icon> Add project</div>
             </article>
             <article class="box">
                 <h3>Doing</h3>
-                <div class="task">
-                    <h4 class="task-title">Task Title</h4>
-                    <p class="task-due">Due: 10/25/21</p>
-                    <div class="task-infos">
-                        <span class="task-comments">
-                            <ion-icon name="chatbubbles-outline"></ion-icon> 3
-                        </span>
-                        <span class="task-attachments">
-                            <ion-icon name="attach-outline"></ion-icon> 8
-                        </span>
-                        <span class="task-checklist">
-                            <ion-icon name="checkbox-outline"></ion-icon> 4/10
-                        </span>
+                <div class="project-list">
+                    <div class="project">
+                        <h4 class="project-title">Project title</h4>
+                        <p class="project-due">Due: 10/25/21</p>
+                        <div class="project-infos">
+                            <span class="project-comments">
+                                <ion-icon name="chatbubbles-outline"></ion-icon> 3
+                            </span>
+                            <span class="project-attachments">
+                                <ion-icon name="attach-outline"></ion-icon> 8
+                            </span>
+                            <span class="project-checklist">
+                                <ion-icon name="checkbox-outline"></ion-icon> 4/10
+                            </span>
+                        </div>
+                        <div class="project-responsable flex">
+                            <p class="project-area">Social Media</p>
+                            <span class="project-user">PL</span>
+                        </div>
                     </div>
-                    <div class="task-responsable flex">
-                        <p class="task-area">Social Media</p>
-                        <span class="task-user">PL</span>
+                    <div class="project">
+                        <h4 class="project-title">Project title</h4>
+                        <p class="project-due">Due: 10/25/21</p>
+                        <div class="project-infos">
+                            <span class="project-comments">
+                                <ion-icon name="chatbubbles-outline"></ion-icon> 3
+                            </span>
+                            <span class="project-attachments">
+                                <ion-icon name="attach-outline"></ion-icon> 8
+                            </span>
+                            <span class="project-checklist">
+                                <ion-icon name="checkbox-outline"></ion-icon> 4/10
+                            </span>
+                        </div>
+                        <div class="project-responsable flex">
+                            <p class="project-area">Social Media</p>
+                            <span class="project-user">PL</span>
+                        </div>
                     </div>
                 </div>
-                <div class="task">
-                    <h4 class="task-title">Task Title</h4>
-                    <p class="task-due">Due: 10/25/21</p>
-                    <div class="task-infos">
-                        <span class="task-comments">
-                            <ion-icon name="chatbubbles-outline"></ion-icon> 3
-                        </span>
-                        <span class="task-attachments">
-                            <ion-icon name="attach-outline"></ion-icon> 8
-                        </span>
-                        <span class="task-checklist">
-                            <ion-icon name="checkbox-outline"></ion-icon> 4/10
-                        </span>
-                    </div>
-                    <div class="task-responsable flex">
-                        <p class="task-area">Social Media</p>
-                        <span class="task-user">PL</span>
-                    </div>
-                </div>
+                <div class="add-project"><ion-icon name="add-outline"></ion-icon> Add project</div>
             </article>
             <article class="box">
                 <h3>Done</h3>
-                <div class="task">
-                    <h4 class="task-title">Task Title</h4>
-                    <p class="task-due">Due: 10/25/21</p>
-                    <div class="task-infos">
-                        <span class="task-comments">
-                            <ion-icon name="chatbubbles-outline"></ion-icon> 3
-                        </span>
-                        <span class="task-attachments">
-                            <ion-icon name="attach-outline"></ion-icon> 8
-                        </span>
-                        <span class="task-checklist">
-                            <ion-icon name="checkbox-outline"></ion-icon> 4/10
-                        </span>
-                    </div>
-                    <div class="task-responsable flex">
-                        <p class="task-area">Social Media</p>
-                        <span class="task-user">PL</span>
+                <div class="project-list">
+                    <div class="project">
+                        <h4 class="project-title">Project title</h4>
+                        <p class="project-due">Due: 10/25/21</p>
+                        <div class="project-infos">
+                            <span class="project-comments">
+                                <ion-icon name="chatbubbles-outline"></ion-icon> 3
+                            </span>
+                            <span class="project-attachments">
+                                <ion-icon name="attach-outline"></ion-icon> 8
+                            </span>
+                            <span class="project-checklist">
+                                <ion-icon name="checkbox-outline"></ion-icon> 4/10
+                            </span>
+                        </div>
+                        <div class="project-responsable flex">
+                            <p class="project-area">Social Media</p>
+                            <span class="project-user">PL</span>
+                        </div>
                     </div>
                 </div>
+                <div class="add-project"><ion-icon name="add-outline"></ion-icon> Add project</div>
             </article>
         </section>
     </main>
     <footer></footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="src/plugins/jquery-ui/jquery-ui.min.js"></script>
     <script src="src/js/scripts.js"></script>
 </body>
 </html>
